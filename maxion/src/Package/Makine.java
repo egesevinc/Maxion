@@ -1,5 +1,5 @@
 package Package;
 
-public class Machine {
+public class Makine {
     String name;
 }
