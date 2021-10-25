@@ -23,7 +23,7 @@ public class Main {
         Operator KalOp12 = new Operator("Ege Sevinç",152320);
         Operator KalOp22= new Operator("Berk Alper",1512323);
 
-        Makine makine = new KalibrePress("press");
+        Makine makine = new Makine("press");
 
         // eğer dept == kalibrepress ekle: otomasyon > loop ile
         makine.getOpList().add(KalOp12);

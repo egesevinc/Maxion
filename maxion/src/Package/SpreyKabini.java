@@ -43,4 +43,3 @@ public class SpreyKabini extends Makine {
         this.press1 = press1;
     }
 }
-
