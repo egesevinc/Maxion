@@ -34,4 +34,9 @@ public class GuvenlikDonanimi {
     public void setLicenseNo(int licenseNo) {
         LicenseNo = licenseNo;
     }
+    // Try-catch bloğu ekle controle
+    public void control(){
+        System.out.println("Kontrol tamamlandı");
+        // kontrol geçmezse error mesajı
+    }
 }

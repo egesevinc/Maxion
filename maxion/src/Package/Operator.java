@@ -4,11 +4,28 @@ import java.util.ArrayList;
 
 public class Operator {
     String name;
+    int password;
     int ID;
     String dept;
     ArrayList<String> mailBox = new ArrayList<>();
     // şifre eklenebilir
 
+
+    public int getPassword() {
+        return password;
+    }
+
+    public void setPassword(int password) {
+        this.password = password;
+    }
+
+    public ArrayList<String> getMailBox() {
+        return mailBox;
+    }
+
+    public void setMailBox(ArrayList<String> mailBox) {
+        this.mailBox = mailBox;
+    }
 
     public Operator() {
         this.name="John Doe";
@@ -49,5 +66,12 @@ public class Operator {
 
     public void setDept(String dept) {
         this.dept = dept;
+    }
+    public void displayMail(){
+        System.out.println("Bildirimleriniz gösteriliyor...");
+        for(int i=0;i<mailBox.size();i++){
+            System.out.println("Mail: "+i);
+            System.out.println(mailBox.get(i));
+        }
     }
 }

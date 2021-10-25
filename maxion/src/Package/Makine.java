@@ -1,6 +1,10 @@
 package Package;
 
+import java.util.ArrayList;
+
 public class Makine {
+    GuvenlikDonanimi g1;
+    ArrayList<Operator> opList = new ArrayList<Operator>();
     String name;
 
     public String getName() {
@@ -15,14 +19,24 @@ public class Makine {
         this.name = name;
     }
 
-
-    // Try-catch bloğu ekle controle
-    public void control(){
-        System.out.println("Kontrol tamamlandı");
-        // kontrol geçmezse error mesajı
+    public GuvenlikDonanimi getG1() {
+        return g1;
     }
+
+    public void setG1(GuvenlikDonanimi g1) {
+        this.g1 = g1;
+    }
+
+    public ArrayList<Operator> getOpList() {
+        return opList;
+    }
+
+    public void setOpList(ArrayList<Operator> opList) {
+        this.opList = opList;
+    }
+
     public void run(){
-        control();
+
         System.out.println("Makine çalışıyor");
     }
     public void stop(){
