@@ -1,4 +1,4 @@
 package Package;
 
-public class KalibrePress {
+public class KalibrePress extends Makine {
 }
