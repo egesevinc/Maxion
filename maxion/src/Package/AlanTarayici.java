@@ -1,5 +1,7 @@
 package Package;
 
+import java.util.Scanner;
+
 public class AlanTarayici extends GuvenlikDonanimi {
     int a;
     int b;

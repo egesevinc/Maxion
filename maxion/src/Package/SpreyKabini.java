@@ -20,13 +20,15 @@ public class SpreyKabini extends Makine {
     // dinamik hale gelebilir?
 
 
-    public SpreyKabini(ArrayList<Operator> opList, String name, AyakPedali a1) {
-        super(a1, opList, name);
+    public SpreyKabini(ArrayList<Operator> opList, String name, AyakPedali a1,Yonetici yonetici) {
+        super(a1, opList, name,yonetici);
         this.press1 = a1;
     }
     public void run(){
-        System.out.println("Döküm Tezgahı işlemleri");
-        System.out.println(getPress1().isPressed);
+        if(test()) {
+            System.out.println("Döküm Tezgahı işlemleri");
+            System.out.println(getPress1().isPressed);
+        }
     }
 
     public AyakPedali getPress1() {
@@ -35,6 +37,14 @@ public class SpreyKabini extends Makine {
 
     public void setPress1(AyakPedali press1) {
         this.press1 = press1;
+    }
+    public boolean test(){
+        boolean tst =super.test();
+        if(!tst){
+            this.yonetici.enterMailbox("Ayak pedalı arızası, yetkili birimlere mail gönderildi");
+        }
+
+        return tst;
     }
 
 }
