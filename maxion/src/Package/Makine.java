@@ -7,6 +7,12 @@ public class Makine {
     ArrayList<Operator> opList = new ArrayList<Operator>();
     String name;
 
+    public Makine(GuvenlikDonanimi g1, ArrayList<Operator> opList, String name) {
+        this.g1 = g1;
+        this.opList = opList;
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -36,7 +42,7 @@ public class Makine {
     }
 
     public void run(){
-
+        g1.control();
         System.out.println("Makine çalışıyor");
     }
     public void stop(){

@@ -10,7 +10,7 @@ public class GuvenlikDonanimi {
         this.isWorking = isWorking;
         LicenseNo = licenseNo;
     }
-
+    // is working neye göre true neye göre false
     public String getName() {
         return name;
     }
@@ -34,9 +34,27 @@ public class GuvenlikDonanimi {
     public void setLicenseNo(int licenseNo) {
         LicenseNo = licenseNo;
     }
+
     // Try-catch bloğu ekle controle
-    public void control(){
-        System.out.println("Kontrol tamamlandı");
-        // kontrol geçmezse error mesajı
+    public boolean control(){
+        boolean test = false;
+        try{
+            if(isWorking){
+                System.out.println("Kontrol tamamlandı");
+                System.out.println("Devam edebilirsiniz");
+                test=true;
+            }
+            else{
+                System.out.println("Hata var kontrol gerekiyor.");
+                test=false;
+            }
+
+
+            // kontrol geçmezse error mesajı
+        }catch(Exception e){
+            System.out.println("Error!");
+            System.out.println(e);
+        }
+        return test;
     }
 }

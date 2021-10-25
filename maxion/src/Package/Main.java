@@ -1,9 +1,29 @@
 package Package;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
     public static void main(String args[]){
         // admin devam
         // Yonetici static olmaktansa obje ve dinamik şekilde olabilir
+
+
+        ArrayList<Operator> kalibrepressList = new ArrayList<Operator>();
+        Operator KalOp12 = new Operator("Ege Sevinç",152320);
+        Operator KalOp22= new Operator("Berk Alper",1512323);
+        kalibrepressList.add(KalOp12);
+        kalibrepressList.add(KalOp22);
+        AlanTarayici g1 = new AlanTarayici("Alan tarayıcı",true,555,20,20);
+        Makine makine = new KalibrePress(kalibrepressList,"Kalibre Press",g1);
+
+
+        ArrayList<Operator> dokumList = new ArrayList<Operator>();
+        Operator dokOp1 = new Operator("Erdem Fuat Yazıcı",23232323);
+        Operator dokOp2= new Operator("Ali Efe Baruş",2323232);
+        kalibrepressList.add(dokOp1);
+        kalibrepressList.add(dokOp2);
+        AcilStopButonu f1 = new AcilStopButonu("Alan tarayıcı",true,555,20,20,10);
+        DokumTezgahi d1 = new DokumTezgahi(dokumList,"Dokum",f1);
+
 
 
         Scanner input = new Scanner(System.in);
@@ -17,21 +37,15 @@ public class Main {
 
         if(Yonetici.isLoggedIn){
             Yonetici.display();
-        }
+            int choice = input.nextInt();
+            switch (choice){
+                case 1:
+                    makine.run();
+                case 2:
+                    d1.run();
+                case 3:
 
-
-        Operator KalOp12 = new Operator("Ege Sevinç",152320);
-        Operator KalOp22= new Operator("Berk Alper",1512323);
-
-        Makine makine = new Makine("press");
-
-        // eğer dept == kalibrepress ekle: otomasyon > loop ile
-        makine.getOpList().add(KalOp12);
-        makine.getOpList().add(KalOp22);
-
-
-        for(int i=0;i<makine.getOpList().size();i++){
-            System.out.println(makine.getOpList().get(i).getName());
+            }
         }
         // loop konabilir
 

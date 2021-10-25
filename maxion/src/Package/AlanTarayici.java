@@ -29,4 +29,5 @@ public class AlanTarayici extends GuvenlikDonanimi {
     public void setB(int b) {
         this.b = b;
     }
+
 }

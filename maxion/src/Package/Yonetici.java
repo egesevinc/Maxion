@@ -20,8 +20,8 @@ public class Yonetici {
     }
     public static void display(){
         System.out.println("Menü açılıyor...");
-        System.out.println("Operator ekle");
-        System.out.println("Operator çıkar");
-        System.out.println("Operator güncelle");
+        System.out.println("1: Kalibre Press");
+        System.out.println("2: Sprey Kabini");
+        System.out.println("3: Döküm Tezgahı");
     }
 }
