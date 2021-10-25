@@ -9,6 +9,17 @@ public class KalibrePress extends Makine {
     Operator KalOp1 = new Operator("Ege Sevinç",150);
     Operator KalOp2 = new Operator("Berk Alper",151);
 
+    public KalibrePress(String name) {
+        super(name);
+    }
+
+    public KalibrePress(String name, AlanTarayici a1, Operator kalOp1, Operator kalOp2) {
+        super(name);
+        this.a1 = a1;
+        KalOp1 = kalOp1;
+        KalOp2 = kalOp2;
+    }
+
     public AlanTarayici getA1() {
         return a1;
     }
@@ -33,14 +44,4 @@ public class KalibrePress extends Makine {
         KalOp2 = kalOp2;
     }
 
-    public KalibrePress(String name) {
-        super(name);
-    }
-
-    public KalibrePress(String name, AlanTarayici a1, Operator kalOp1, Operator kalOp2) {
-        super(name);
-        this.a1 = a1;
-        KalOp1 = kalOp1;
-        KalOp2 = kalOp2;
-    }
 }
